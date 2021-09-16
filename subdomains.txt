@@ -1,0 +1,2 @@
+Frontend
+HTML, CSS, SASS, Bootstrap, Tailwind, Svelte, React, Angular, Javascript, Typescript, jQuery 
