@@ -24,7 +24,6 @@ elasticsearch
 hiveql
 hive
 elastic stack (elk)
-excel
 gnuplot
 graphology
 keyword research
@@ -32,7 +31,6 @@ dataflow
 etl tools
 itk
 r
-ms excel
 mathlab
 matlab
 matplotlib
@@ -40,7 +38,6 @@ microsoft excel
 microsoft office
 microsoft power bi
 microstrategy
-ms-excel
 netezza
 office 365
 pharma analytics
@@ -106,6 +103,7 @@ assembly programming
 robot operating system (ros)
 robotic design
 c
+competitive programming
 uipath
 papyrus
 ansible
@@ -164,6 +162,7 @@ nestjs
 node.js
 npm
 struts
+cybersecurity
 php
 php applications
 phpmyadmin
@@ -269,6 +268,7 @@ microsoft word
 presentations
 flutter
 react native
+distributed systems
 .net
 powerbuilder
 salesforce
@@ -318,6 +318,7 @@ data modelling
 data mining
 database design
 database queries
+dbms
 greenplum
 hdfs
 dialogflow
@@ -380,8 +381,7 @@ mulesoft cloudhub
 snowflake
 rabbitmq
 design and analysis of algorithms
-data structures
-assistant teaching
+DSA
 teaching
 career development
 research
@@ -448,7 +448,7 @@ ajax
 ember.js
 ecmascript
 semantic html5
-angular
+angular.js
 tailwind css
 api
 babel.js
@@ -470,9 +470,7 @@ expertise in lwc & lightning development
 highcharts
 javafx
 redux
-react
-react hooks
-react js
+react.js
 laravel
 less
 materialize css
@@ -531,6 +529,7 @@ self-confidence
 slack
 soft skills
 team building
+team management
 event management
 event planning
 executive management
@@ -573,7 +572,6 @@ kivy
 kotlin
 ios development
 retfofit
-react native paper
 mobile application development
 mobile devices
 mobile applications
@@ -608,11 +606,10 @@ linux
 gnu
 uwp
 ucos
-real-time operating systems (rtos)
 multitasking
 multithreading
 multithreaded development
-operating systems
+os
 scripting
 appication lifecycle management
 blackduck
@@ -742,7 +739,7 @@ load (etl)
 model-view-controller (mvc)
 mvc
 system administration
-object-oriented programming (oop)
+oop
 parallel programming
 sourcing
 sequence models
@@ -809,6 +806,7 @@ user interface css formatting
 visualforce
 uistudioz
 beautiful soup
+blockchain
 web crawling
 web scraping
 social media blogging
