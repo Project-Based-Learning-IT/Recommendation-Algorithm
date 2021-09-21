@@ -1,6 +1,7 @@
 Skills
 cad software
 abaqus
+arduino
 autocad
 tinkercad
 ansys
@@ -31,8 +32,7 @@ dataflow
 etl tools
 itk
 r
-mathlab
-matlab
+r&d
 matplotlib
 microsoft excel
 microsoft office
@@ -43,7 +43,6 @@ office 365
 pharma analytics
 spss
 spreadsheets
-power bi
 qlikview
 artificial intelligence
 python
@@ -99,7 +98,7 @@ poetry writing
 frontend
 public speaking
 professional communication
-assembly programming
+assembly language
 robot operating system (ros)
 robotic design
 c
@@ -121,7 +120,7 @@ job control language (jcl)
 maven
 targetlink
 xml
-rest api
+rest
 sails.js
 databases
 typescript
@@ -164,14 +163,12 @@ npm
 struts
 cybersecurity
 php
-php applications
 phpmyadmin
 spring mvc
 spring boot
 spring
 smarty
 yii
-phpstorm
 phpunit
 postman
 raml
@@ -185,6 +182,7 @@ time management
 alteryx
 brand management
 business planning
+business intelligence
 business management
 cc&b
 channel partners
@@ -205,6 +203,7 @@ valuation
 leadership
 market analysis
 market research
+strategic planning
 negotiation
 new business development
 new business generation
@@ -232,7 +231,6 @@ algorithms
 c++
 problem analysis
 problem solving
-programming
 hypertext transfer protocol (http)
 telecommunication
 tcp/ip
@@ -246,7 +244,6 @@ networking
 network administration
 soap
 signal processing
-signal conditioning
 session initiation protocol (sip)
 putty
 training
@@ -269,12 +266,11 @@ presentations
 flutter
 react native
 distributed systems
-.net
+.net framework
 powerbuilder
 salesforce
 apttus cpq
 mulesoft
-d365 ce
 acunetix
 ethical hacking
 application security
@@ -291,10 +287,8 @@ deep neural networks (dnn)
 digital image processing
 keras
 tableau
-exploratory data analysis
 rstudio
 rapidminer
-statistical data analysis
 numpy
 numpy library
 pandas
@@ -322,7 +316,7 @@ dbms
 greenplum
 hdfs
 dialogflow
-relational database
+relational databases
 redis
 rdbms
 mariadb
@@ -362,11 +356,9 @@ terraform
 restful webservices
 xcode
 google cloud dataflow"
-google kubernetes engine (gke)
 aws
 aws sagemaker
 aws lambda
-azure
 ci/cd
 cloud computing
 cloud storage
@@ -400,20 +392,16 @@ nltk
 systemverilog
 orcad
 pcb design
-pcb designing
 simulations
 pic assembly
 pic microcontroll
-pic programming
 plc allen bradley
 plc programming
 power electronics
-printed circuit board (pcb) design
 programmable logic controller (plc)
 programmable logic
 proteus
 psim
-adruino
 account management
 accounting
 trading
@@ -438,7 +426,6 @@ stock market analysis
 portfolio management
 private equity
 production processes
-.net
 unity
 web technologies
 knockoutjs
@@ -474,7 +461,6 @@ react.js
 laravel
 less
 materialize css
-microsoft .net
 mobx
 nextjs
 next.js
@@ -492,11 +478,12 @@ mean stack
 mern stack
 unity
 computer graphics
+computer networking
 microsoft airsim
 vector illustration
 adobe creative suite
 adobe photoshop
-coral draw
+coreldraw
 webgl
 motion graphics
 tkinter
@@ -513,7 +500,7 @@ soldering
 ultium
 spare parts
 embedded c++
-adruino
+embedded c
 industrial engineering 
 industrial internet of things (iiot)"
 iot developer
@@ -524,7 +511,6 @@ adalo
 vba programming
 opencv
 seaborn
-wordpress 
 self-confidence
 slack
 soft skills
@@ -563,11 +549,9 @@ biw(body in white)
 solid design principles
 dealership management
 heat transfer
-instrumentation
 internal combustion engines
 mechanical drawings
 mechanical engineering
-rest api
 kivy
 kotlin
 ios development
@@ -584,7 +568,6 @@ volunteering
 training
 emotional intelligence
 interpersonal skills
-social work
 social services
 group discussions
 extemporaneous speaking
@@ -616,7 +599,6 @@ blackduck
 bom management
 global sales operations
 global operations
-software testing life cycle
 stage management
 production support
 operations
@@ -626,14 +608,13 @@ sales & marketing
 twitter
 direct sales
 sponsorship
-social media
-social media analytics
 advertising
 affiliate marketing
 email
 facebook ads
 google ads
 google analytics
+data analysis
 influencer marketing
 b2b and b2c marketing
 bargaining
@@ -656,7 +637,6 @@ multimedia
 offline marketing
 online advertising
 online marketing
-paid social media advertising
 sfmc
 pre sales
 presentation skills
@@ -704,7 +684,6 @@ standard widget toolkit (swt)
 open source software
 solr
 scala
-programming languages
 pycharm
 5s
 six sigma
@@ -718,7 +697,7 @@ git
 github
 agile
 application lifecycle management
-software project management
+project management
 flow charts
 behavior-driven development (bdd)
 google docs bitbucket
@@ -762,27 +741,23 @@ sports analysis
 rubiks cube
 athletics
 fitness
-gym
 highjump
 cricket
 long distance running
 thermodynamics
-theory of computation
 telescope
 solar energy
-social psychology
+psychology
 environmental science
-discrete mathematics
 history
 cognitive psychology
-mathematics
+maths
 user acceptance testing 
 unit testing
 test management
 test automation
 troubleshooting
 api testing
-automated software testing
 selenium
 jest
 cypress
@@ -801,16 +776,14 @@ ranorex
 adobe xd
 figma
 web design
-user interface prototyping
-user interface css formatting
 visualforce
 uistudioz
 beautiful soup
 blockchain
 web crawling
 web scraping
-social media blogging
-social media content creation
+blogging
+content creation
 social media marketing
 adobe illustrator
 adobe after effects
@@ -824,3 +797,7 @@ engineering mathematics
 sports industry
 software quality assurance
 game development
+full stack development
+seo
+ui
+ux
