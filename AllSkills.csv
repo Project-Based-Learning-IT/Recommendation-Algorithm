@@ -4,6 +4,7 @@ abaqus
 arduino
 autocad
 tinkercad
+swift
 ansys
 autodesk
 catia
@@ -55,7 +56,6 @@ neural networks
 object detection
 speech recognition
 pytorch
-accoustic guitar
 acting
 singing
 singer-songwriter
@@ -77,7 +77,6 @@ comedian
 comic art
 fl studio
 cooking
-desktop publishing
 travel planning
 letter writing
 report writing
@@ -121,7 +120,6 @@ maven
 targetlink
 xml
 rest
-sails.js
 databases
 typescript
 express.js
@@ -133,6 +131,7 @@ firebase
 ecmascript 
 server side
 apache
+apache spark
 api
 javascript
 json
@@ -149,9 +148,9 @@ hibernate
 javaserver faces (jsf)
 haproxy
 flogo
-jaxrs
 jpa
 xampp
+splunk
 wcf services
 microservices
 mainframe
@@ -167,7 +166,6 @@ phpmyadmin
 spring mvc
 spring boot
 spring
-smarty
 yii
 phpunit
 postman
@@ -205,7 +203,7 @@ market analysis
 market research
 strategic planning
 negotiation
-new business development
+business development
 new business generation
 new client generation
 open innovation
@@ -232,7 +230,7 @@ c++
 problem analysis
 problem solving
 hypertext transfer protocol (http)
-telecommunication
+telecommunications
 tcp/ip
 distributed systems
 ccna
@@ -271,7 +269,6 @@ powerbuilder
 salesforce
 apttus cpq
 mulesoft
-acunetix
 ethical hacking
 application security
 cloud security
@@ -281,19 +278,15 @@ cryptography
 ctf
 keycloak
 penetration testing
-decision-making
+decision making
 deep learning
-deep neural networks (dnn)
 digital image processing
 keras
 tableau
 rstudio
 rapidminer
 numpy
-numpy library
 pandas
-pandas library
-pandas (software)
 pattern recognition
 spreadsheets
 seabornm
@@ -346,6 +339,7 @@ vegas
 logo design
 photoshop
 poster design
+creative writing
 kubernetes
 heroku
 google cloud platform (gcp)
@@ -387,6 +381,7 @@ tensorflow
 computer vision
 reinforcement learning
 recurrent neural networks (rnn)
+cnn
 machine learning
 nltk
 systemverilog
@@ -397,7 +392,7 @@ pic assembly
 pic microcontroll
 plc allen bradley
 plc programming
-power electronics
+electronics
 programmable logic controller (plc)
 programmable logic
 proteus
@@ -406,6 +401,7 @@ account management
 accounting
 trading
 algorithmic trading
+circuit design
 electronic trading
 financial advisory
 financial analysis
@@ -503,7 +499,7 @@ embedded c++
 embedded c
 industrial engineering 
 industrial internet of things (iiot)"
-iot developer
+iot
 esp8266
 raspberry pi
 mqtt
@@ -533,6 +529,7 @@ logistics management
 maintenance
 microsoft project
 strategic customer development
+crm
 organising
 organization skills
 political strategy
@@ -557,8 +554,6 @@ kotlin
 ios development
 retfofit
 mobile application development
-mobile devices
-mobile applications
 mockito
 model-view-viewmodel (mvvm)
 objective c
@@ -566,11 +561,11 @@ android development
 youth marketing 
 volunteering
 training
+cloud firestore
 emotional intelligence
 interpersonal skills
 social services
 group discussions
-extemporaneous speaking
 ethics
 hospitality service
 relationship building
@@ -580,8 +575,6 @@ prezi
 wpf development
 technical support
 style sheets
-windows application
-windows programming
 fedora
 unix
 kali linux
@@ -651,7 +644,7 @@ shell scripting
 powershell
 comsol(physics simulation)
 matlab
-gnu octave
+octave
 ltspice
 msc adams
 multisim
@@ -660,7 +653,6 @@ eclipse ide
 application development
 visual studio
 go
-debugging
 intellij idea
 groovy
 f#
@@ -668,7 +660,6 @@ haskell
 julia
 javabeans
 java swing
-desktop application development
 javase
 information technology support specialist
 j2ee application development
@@ -721,8 +712,7 @@ system administration
 oop
 parallel programming
 sourcing
-sequence models
-software development life cycle (sdlc) 
+software development
 plm tools
 prototyping
 quality assurance
