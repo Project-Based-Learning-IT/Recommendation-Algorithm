@@ -1,28 +1,57 @@
-Frontend
-App
-Competitive
-Blockchain
-Backend
-Cybersecurity	
-IOT
-VR
+3D Modelling
+Data Analytics and Visualization
 AR
-Networking
-DevOps/Cloud
-Game development
-Data Science
-Testing/debugger
-Management
-Consulting
-Software development
-Risk Management
-UI/UX
-Graphic Design
-VLSI
-Automobile Engineering
-Manufacturing
-Marketing (Social Media Marketing, Digital Marketing)
-Operations
+Arts
+Assembly Programming
+Robotics
+Automation
+Backend
+Blockchain
 Business
-3D Design
-Art
+Business Intelligence
+Competitive Coding
+Computer Network
+Consulting
+Content
+Customer Relationship Management CRM and Enterprise Relationship management ERP (Business Applications)
+Cybersecurity
+Data Science
+DataBases
+Designer
+DevOps/Cloud
+DSA
+Educator
+Electronics
+Embedded Systems and IOT
+Entrepreneur
+Finance
+Frontend
+Full Stack
+Game development
+Graphic Design
+Hardware
+Human Resource Management
+Low Code
+Machine Learning and Artificial Intelligence
+Management
+Mechanical
+Mobile App
+Networking
+No code
+Operating System
+Operations
+Risk Management
+Marketing
+Shell
+Simulation
+Software development
+Software Engineering
+Spoken Languages
+Sports
+Subject Knowledge
+Testing/debugger
+UI/UX
+VR
+Web Crawling and Scraping
+GUI
+Compiler
