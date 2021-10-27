@@ -1,20 +1,18 @@
 3D Modelling
-Data Analytics and Visualization
 AR
 Arts
-Assembly Programming
-Robotics
 Automation
 Backend
 Blockchain
-Business
+Business and Enterpreneurship
 Business Intelligence
-Competitive Coding
+Competitive Programming
 Computer Network
 Consulting
 Content
-Customer Relationship Management CRM and Enterprise Relationship management ERP (Business Applications)
+CRM and ERP
 Cybersecurity
+Data Analytics and Visualization
 Data Science
 DataBases
 Designer
@@ -22,26 +20,25 @@ DevOps/Cloud
 DSA
 Educator
 Electronics
-Embedded Systems and IOT
-Entrepreneur
+Embedded Systems
 Finance
 Frontend
 Full Stack
-Game development
+Game development and VR
 Graphic Design
 Hardware
 Human Resource Management
+IOT
 Low Code
-Machine Learning and Artificial Intelligence
 Management
+Marketing
 Mechanical
 Mobile App
 Networking
 No code
 Operating System
 Operations
-Risk Management
-Marketing
+Robotics
 Shell
 Simulation
 Software development
@@ -51,7 +48,6 @@ Sports
 Subject Knowledge
 Testing/debugger
 UI/UX
-VR
-Web Crawling and Scraping
-GUI
-Compiler
+Web Crawling
+Compiler Design
+Research
