@@ -485,7 +485,6 @@ yii
 aws lambda
 comic art
 accounting
-self-confidence
 hive
 spring
 penetration testing
