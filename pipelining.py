@@ -4,42 +4,57 @@ import json
 from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
 import joblib
-
-#This code is supposed to be run once/twice in a week
-
-# User - Skill mapping
-# { "Username" : [skill1, skill2, skill3, ......., skilln] }
-
+import random
 def get_skills_n_domains(skill_domain_dict):
+    json.dump(skill_domain_dict, open('skill_domain_dict.json', 'w'))
     skills = set()
     domains = set()
     skill_domain_map = {}
     for element in skill_domain_dict:
         domains.add(element['domain_name'])
+        skillsList = []
         for skill in element['skills']:
             skills.add(skill['skill_name'])
-        skill_domain_map[element['domain_name']] = skills
+            skillsList.append(skill['skill_name'])
+        skill_domain_map[element['domain_name']] = skillsList
     skills = list(skills)
     domains = list(domains)
+    print("Total Skills - {}".format(len(skills)))
+    print("Total Domains - {}".format(len(domains)))
     skills.sort()
     domains.sort()
 
     SkillDomains = []
-    for domain in domains:
+    for skill in skills:
         oneHotSkillDomainList = []
-        for skill in skills:
-            if(skill in skill_domain_map[domain]):
-                oneHotSkillDomainList.append(1)
-            else:
-                oneHotSkillDomainList.append(0)
+        for domain in domains:
+          if(skill in skill_domain_map[domain]):
+              oneHotSkillDomainList.append(1)
+          else:
+              oneHotSkillDomainList.append(0)
         oneHotSkillDomainList.insert(0,skill)
         SkillDomains.append(oneHotSkillDomainList)
+    # print(SkillDomains)
+    
     columns = []
     columns.extend(domains)
     columns.insert(0,'SkillName')
     df_skill_n_domains = pd.DataFrame(SkillDomains,columns=columns)
     df_skill_n_domains.to_csv('skill_n_domain.csv',index=False)
-    return skills, SkillDomains
+
+    SkillDomainsOneHot = []
+    for skill in skills:
+        onehot = []
+        for domain in domains:
+            if(skill in skill_domain_map[domain]):
+                onehot.append(1)
+            else:
+                onehot.append(0)
+        SkillDomainsOneHot.append(onehot)
+    # print(SkillDomainsOneHot)
+
+
+    return skills, SkillDomainsOneHot
 
 def get_user_names(user_skill_dict):
     UserNames = []
@@ -61,25 +76,37 @@ def create_models(UserSkills, UserDomains):
     joblib.dump(domain_based_model,'KNN_user_domains.pkl')
 
 
+def save_usernames_insequence(usernames):
+    with open('usernames.txt', 'w') as f:
+        for username in usernames:
+            f.write(username + '\n')
+
+def read_usernames_insequence():
+    with open('usernames.txt', 'r') as f:
+        usernames = list(map(lambda x:x.strip('\n'),f.readlines()))
+    return usernames
+
 def user_data_matrix(user_skill_dict, Allskills):
-    user_skill_dict.sort()
+#     user_skill_dict = sorted(user_skill_dict)
     UserSkills = []
-    UserNames = {}
+    UserNames = []
     for username,skill_list in user_skill_dict.items():
-        UserNames.append(username)
-        oneHotSkillList = []
-        for skill in Allskills:
-            if(skill in skill_list):
-                oneHotSkillList.append(1)
-            else:
-                oneHotSkillList.append(0)
-        UserSkills.append(oneHotSkillList)
-    json.dump(UserNames,open('allUserNames.json','w'))
+        if(username!=None):
+            UserNames.append(username.lower())
+            oneHotSkillList = []
+            for skill in Allskills:
+                if(skill in skill_list):
+                    oneHotSkillList.append(1)
+                else:
+                    oneHotSkillList.append(0)
+            UserSkills.append(oneHotSkillList)
+    #write usernames in same sequence to text file and read also from text file
+    save_usernames_insequence(UserNames)
     return UserSkills
 
 def weights(UserSkills, SkillDomains):
-    UserSkills = np.array(UserSkills)
-    SkillDomains = np.array(SkillDomains)
+    UserSkills = np.array(UserSkills,dtype=np.float64)
+    SkillDomains = np.array(SkillDomains,dtype=np.float64)
     UserDomains = np.dot(UserSkills, SkillDomains)
     return UserDomains
 
@@ -92,10 +119,8 @@ def get_target_user_data(target_user_skills):
             target_skills.append(1)
         else:
             target_skills.append(0)
-    target_skills = np.array(target_skills)
-    
-    SkillDomains = np.array(df_skill_n_domain.iloc[:,1:].values)
-
+    target_skills = np.array(target_skills,dtype=np.float64)
+    SkillDomains = np.array(df_skill_n_domain.iloc[:,1:].values,dtype=np.float64)
     target_domains = np.dot(target_skills, SkillDomains)
     return target_skills, target_domains
 
@@ -104,33 +129,45 @@ def recommendUsers(target_user_skills, target_user_domains, UserNames):
     domain_based_model = joblib.load('KNN_user_domains.pkl', mmap_mode='r')
 
     #TODO: See this return distances parameter and how to access these distances
-    skills_based_similar_users, skills_based_similar_user_distances = skill_based_model.kneighbors([target_user_skills],10)
-    domains_based_similar_users, domains_based_similar_user_distances = domain_based_model.kneighbors([target_user_domains],10)
+    skills_based_similar_user_distances, skills_based_similar_users = skill_based_model.kneighbors([target_user_skills],10)
+    domains_based_similar_user_distances, domains_based_similar_users = domain_based_model.kneighbors([target_user_domains],10)
 
-    skill_based_user_names = []
-    domain_based_user_names = []
+    # skill_based_user_names = []
+    # domain_based_user_names = []
 
-    for usr_indx in skills_based_similar_users[0]:
-        skill_based_user_names.append(UserNames[usr_indx])
-    for usr_indx in domains_based_similar_users[0]:
-        domain_based_user_names.append(UserNames[usr_indx])
+    # # cutoff = 0.5
+    # for usr_indx in skills_based_similar_users[0]:
+    #     skill_based_user_names.append(UserNames[usr_indx])
+    # for usr_indx in domains_based_similar_users[0]:
+    #     domain_based_user_names.append(UserNames[usr_indx])
     
-    return skill_based_user_names, domain_based_user_names
+    Suggestions = list()
+    for usr_indx in skills_based_similar_users[0]:
+        if(UserNames[usr_indx] not in Suggestions):
+            Suggestions.append(UserNames[usr_indx])
+    for usr_indx in domains_based_similar_users[0]:
+        if(UserNames[usr_indx] not in Suggestions):
+            Suggestions.append(UserNames[usr_indx])
+    return Suggestions
 
-#TODO : write the main driver code which will connect all these functions.
-#TODO : see error handling and exception handling in python (erros generated from database)
-
+#=======================================================================================================================
+#                         MAIN LOGIC
+#=======================================================================================================================          
 def update_models(skill_domain_dict, user_skill_dict):
     skills, SkillDomains = get_skills_n_domains(skill_domain_dict)
     UserSkills = user_data_matrix(user_skill_dict, skills) #user-skill-data-matrix
     UserDomains = weights(UserSkills, SkillDomains)
     create_models(UserSkills, UserDomains)
+    #add return statement to see if everything went down properly
 
-#TODO: think of a waay to not require the user-skill-dict as its costly operation
 def predict(target_user_skills):
-    UserNames = json.load(open('allUserNames.json')) #[1]
-    encoded_target_user_skills, encoded_target_user_domains = get_target_user_data(target_user_skills)
-    similar_skill_users, similar_domain_users = recommendUsers(encoded_target_user_skills, encoded_target_user_domains, UserNames)
+  """
+  input: target_user_skills - dict{"username": [skill1, skill2, ...]}
+  """
+  UserNames = read_usernames_insequence() #[1]
+  encoded_target_user_skills, encoded_target_user_domains = get_target_user_data(target_user_skills)
+  suggestions = recommendUsers(encoded_target_user_skills, encoded_target_user_domains, UserNames)
+  return suggestions
 
 
 """
@@ -140,3 +177,13 @@ This pkl file will be updated after some days so till then we are saving the pre
 usernames so the returned indexes for a target user match the correct users.
 These recommended users may not be present in database and we will have to do error handling there.
 """
+
+def get_random_skills():
+    skills = list(map(lambda x:x.strip('\n'), open('skills.txt','r').readlines()))
+    return skills
+
+if __name__ == '__main__':
+    userskills = get_random_skills()
+    target_user_skills = random.sample(userskills, 10)
+    print(f'input skills:\n{target_user_skills}')
+    print(f'\nrecommended users:\n{predict(target_user_skills)}')
